@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body class="page__body">
 
-    <div class="container">
+    <div class="page-container">
       <header class="page-header">
         <nav class="page-header__nav main-nav">
           <a class="main-nav__logo" href="index.html">
@@ -23,7 +24,7 @@
               <a class="site-list__link site-list__link--current">Гостиницы</a>
             </li>
           </ul>
-          <ul class="main-nav user-list">
+          <ul class="main-nav__list user-list">
             <li class="user-list__item">
               <a class="user-list__link" href="#">
                 <span class="visually-hidden">Поиск.</span>
@@ -141,11 +142,12 @@
                 </div>
               </fieldset>
               <div class="form__buttons">
-                <button class="button button--submit" type="submit">Применить</button>
+                <button class="button button--submit button--blue" type="submit">Применить</button>
                 <button class="button button--reset" type="reset">Сбросить</button>
               </div>
             </form>
           </section>
+        </div>
 
           <section class="sorting">
             <h2 class="visually-hidden">Сортировка списка гостиниц.</h2>
@@ -177,8 +179,12 @@
 
             <ul class="sorting__list">
               <li class="sorting__item card">
-                <img class="card__image" src="images/catalog/hotel-amara.jpeg" width="300" height="211" alt="Amara Resort & Spa.">
-                <h3 class="card__title">Amara Resort & Spa</h3>
+                <a class="card__link-image" href="#">
+                  <img class="card__image" src="images/catalog/hotel-amara.jpeg" width="300" height="211" alt="Amara Resort & Spa.">
+                </a>
+                <a class="card__link-title" href="#">
+                  <h3 class="card__title">Amara Resort & Spa</h3>
+                </a>
                 <p class="card__type">Гостиница</p>
                 <p class="price">От 4000 ₽</p>
                 <a class="card__button button" href="#">Подробнее</a>
@@ -186,11 +192,15 @@
                 <p class="card__stars-raiting card__stars-raiting--four">
                   <span class="visually-hidden">Четыре звезды.</span>
                 </p>
-                <span class="hotels-card-raiting">Рейтинг: 8,5</span>
+                <span class="card__raiting">Рейтинг: 8,5</span>
               </li>
               <li class="sorting__item card">
-                <img class="card__image" src="images/catalog/hotel-villas.jpeg" width="300" height="211" alt="Villas at Poco Diablo.">
-                <h3 class="card__title">Villas at Poco Diablo</h3>
+                <a class="card__link-image" href="#">
+                  <img class="card__image" src="images/catalog/hotel-villas.jpeg" width="300" height="211" alt="Villas at Poco Diablo.">
+                </a>
+                <a class="card__link-title" href="#">
+                  <h3 class="card__title">Villas at Poco Diablo</h3>
+                </a>
                 <p class="card__type">Гостиница</p>
                 <p class="price">От 5000 ₽</p>
                 <a class="card__button button" href="#">Подробнее</a>
@@ -198,11 +208,15 @@
                 <p class="card__stars-raiting card__stars-raiting--four">
                   <span class="visually-hidden">Четыре звезды.</span>
                 </p>
-                <span class="hotels-card-raiting">Рейтинг: 9,2</span>
+                <span class="card__raiting">Рейтинг: 9,2</span>
               </li>
               <li class="sorting__item card">
-                <img class="card__image" src="images/catalog/hotel-desertquail.jpeg" width="300" height="211" alt="Desert Quail Inn.">
-                <h3 class="card__title">Desert Quail Inn</h3>
+                <a class="card__link-image" href="#">
+                  <img class="card__image" src="images/catalog/hotel-desertquail.jpeg" width="300" height="211" alt="Desert Quail Inn.">
+                </a>
+                <a class="card__link-title" href="#">
+                  <h3 class="card__title">Desert Quail Inn</h3>
+                </a>
                 <p class="card__type">Гостиница</p>
                 <p class="price">От 2500 ₽</p>
                 <a class="card__button button" href="#">Подробнее</a>
@@ -210,11 +224,15 @@
                 <p class="card__stars-raiting card__stars-raiting--three">
                   <span class="visually-hidden">Три звезды.</span>
                 </p>
-                <span class="hotels-card-raiting">Рейтинг: 6,9</span>
+                <span class="card__raiting">Рейтинг: 6,9</span>
               </li>
               <li class="sorting__item card">
-                <img class="card__image" src="images/catalog/hotel-greentree.jpeg" width="300" height="211" alt="GreenTree Inn.">
-                <h3 class="card__title">GreenTree Inn</h3>
+                <a class="card__link-image" href="#">
+                  <img class="card__image" src="images/catalog/hotel-greentree.jpeg" width="300" height="211" alt="GreenTree Inn.">
+                </a>
+                <a class="card__link-title" href="#">
+                  <h3 class="card__title">GreenTree Inn</h3>
+                </a>
                 <p class="card__type">Гостиница</p>
                 <p class="price">От 1500 ₽</p>
                 <a class="card__button button" href="#">Подробнее</a>
@@ -222,7 +240,7 @@
                 <p class="card__stars-raiting card__stars-raiting--two">
                   <span class="visually-hidden">Две звезды.</span>
                 </p>
-                <span class="hotels-card-raiting">Рейтинг: 5,0</span>
+                <span class="card__raiting">Рейтинг: 5,0</span>
               </li>
             </ul>
             <div class="sorting__pagination-container">
@@ -265,7 +283,6 @@
             </form>
           </section>
 
-        </div>
       </main>
 
       <footer class="page-footer">
