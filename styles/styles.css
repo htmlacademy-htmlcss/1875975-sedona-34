@@ -61,11 +61,11 @@
   border-radius: 4px;
 }
 
-.button--blue {
+.button--second {
   background-color: #82b3d3;
 }
 
-.button--green {
+.button--selected {
   background-color: #7db54f;
 }
 
