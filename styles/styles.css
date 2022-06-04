@@ -1,0 +1,291 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.page {
+  height: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page__body {
+  height: 100%;
+  margin: 0;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  background-color: #f2f2f2;
+}
+
+.button {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #756157;
+  border: 0;
+  border-radius: 4px;
+}
+
+.button--second {
+  background-color: #82b3d3;
+}
+
+.button--selected {
+  background-color: #7db54f;
+}
+
+.button--reset {
+  font-weight: 400;
+  text-transform: none;
+  background-color: transparent;
+}
+
+.page-container {
+  background-color: #ffffff;
+}
+
+.main-nav__list {
+  list-style-type: none;
+}
+
+.site-list__link {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+}
+
+.intro {
+  background-color: #d9e7f0;
+  background-image: url("../images/index-background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.features {
+  text-align: center;
+}
+
+.features__slogan {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.features__subtitle {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.features__list,
+.arguments__list {
+  list-style-type: none;
+}
+
+.features__item-container {
+  color: #ffffff;
+  background-color: #82b3d3;
+}
+
+.features__item:nth-of-type(3),
+.features__item:nth-of-type(5),
+.arguments__item:nth-of-type(odd) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.features__item:nth-of-type(4) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.features__title,
+.arguments__title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.features__title--with-photo {
+  color: #ffffff;
+}
+
+.search-hotel {
+  text-align: center;
+}
+
+.search-hotel__title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.search-hotel__description {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.search-hotel__link {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.subscribe {
+  text-align: center;
+}
+
+.subscribe--index {
+  color: #ffffff;
+  background-color: #d9e7f0;
+  background-image: url("../images/subscribe-background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.subscribe__title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.subscribe__title--index {
+  color: #ffffff;
+}
+
+.subscribe__description {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.subscribe__button {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.social {
+  list-style-type: none;
+}
+
+.page-footer__phone {
+  font-size: 40px;
+  line-height: 40px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.filters-container {
+  color: #ffffff;
+  background-color: #82b3d3;
+  background-image: url("../images/catalog-background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.inner-header__title {
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.breadcrumbs {
+  list-style-type: none;
+}
+
+.breadcrumbs__link {
+  text-decoration: none;
+}
+
+.form__title {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.form__list {
+  list-style-type: none;
+}
+
+.sorting__title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.sorting__list {
+  list-style-type: none;
+}
+
+.card__link-title {
+  text-decoration: none;
+}
+
+.card__title {
+  font-size: 24px;
+  line-height: 31px;
+  color: #000000;
+}
+
+.card__raiting {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+}
+
+.pagination__link {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #83b3d3;
+  text-decoration: none;
+}
+
+.pagination__link--current {
+  color: #000000;
+  background-color: #f2f2f2;
+}
+
