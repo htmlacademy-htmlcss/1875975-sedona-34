@@ -14,7 +14,7 @@
   font-display: swap;
 }
 
-/* *,
+*,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -22,9 +22,9 @@
 
 .page {
   height: 100%;
-} */
+}
 
-/* .visually-hidden {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -33,12 +33,11 @@
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-} */
+}
 
 .page__body {
-  /* max-width: 1280px;
-  min-height: 100%;
-  margin: 0; */
+  height: 100%;
+  margin: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -48,7 +47,6 @@
 
 .button {
   display: inline-block;
-  font: inherit;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
@@ -61,11 +59,11 @@
   border-radius: 4px;
 }
 
-.button--blue {
+.button--second {
   background-color: #82b3d3;
 }
 
-.button--green {
+.button--selected {
   background-color: #7db54f;
 }
 
@@ -83,27 +81,13 @@
   list-style-type: none;
 }
 
-.site-list__link,
-.user-list__link {
+.site-list__link {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
   text-decoration: none;
 }
-
-.user-list__link.button {
-  font-size: 16px;
-  line-height: 20px;
-  color: #ffffff;
-}
-
-/* или вместо комбинированного селектора создать модификатор и стилизовать по нему? */
-/* .button--list-item {
-  font-size: 16px;
-  line-height: 20px;
-  color: #ffffff;
-} */
 
 .intro {
   background-color: #d9e7f0;
@@ -140,17 +124,14 @@
   background-color: #82b3d3;
 }
 
-.features__item--light-blue,
-.arguments__item {
+.features__item:nth-of-type(3),
+.features__item:nth-of-type(5),
+.arguments__item:nth-of-type(odd) {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.features__item--medium-blue {
+.features__item:nth-of-type(4) {
   background-color: rgba(131, 179, 211, 0.2);
-}
-
-.arguments__item--white {
-  background-color: #ffffff;
 }
 
 .features__title,
@@ -162,10 +143,9 @@
   color: #000000;
 }
 
-.features__item-container .features__title {
+.features__title--with-photo {
   color: #ffffff;
 }
-/* тот же вопрос - нужен ли модификатор или можно комбинировать селекторы? */
 
 .search-hotel {
   text-align: center;
