@@ -20,6 +20,11 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
 .page {
   height: 100%;
 }
@@ -74,11 +79,35 @@
 }
 
 .page-container {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  margin: 0 auto;
   background-color: #ffffff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.content-container {
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+.main-nav {
+  display: flex;
+}
+
+.main-nav__logo {
+  margin-right: 30px;
 }
 
 .main-nav__list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .site-list__link {
@@ -87,6 +116,14 @@
   font-weight: 700;
   color: #000000;
   text-decoration: none;
+}
+
+.user-list {
+  margin-left: auto;
+}
+
+.user-list__link {
+  min-width: 160px;
 }
 
 .intro {
@@ -102,6 +139,9 @@
 }
 
 .features__slogan {
+  display: block;
+  width: 720px;
+  margin: 0 auto;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -117,11 +157,27 @@
 .features__list,
 .arguments__list {
   list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
-.features__item-container {
-  color: #ffffff;
-  background-color: #82b3d3;
+.features__item {
+  width: 400px;
+  min-height: 384px;
+  padding: 103px 85px;
+}
+
+.features__item--with-photo {
+  width: 1200px;
+  padding: 0;
+}
+
+.arguments__item {
+  width: 400px;
+  min-height: 384px;
+  padding: 183px 85px 80px;
 }
 
 .features__item:nth-of-type(3),
@@ -134,8 +190,24 @@
   background-color: rgba(131, 179, 211, 0.2);
 }
 
+.features__item-container {
+  display: flex;
+  color: #ffffff;
+  background-color: #82b3d3;
+}
+
+.features__item-container--reverse {
+  flex-direction: row-reverse;
+}
+
+.features__text {
+  padding: 92px 85px;
+}
+
 .features__title,
 .arguments__title {
+  margin: 0;
+  margin-bottom: 30px;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
@@ -147,7 +219,25 @@
   color: #ffffff;
 }
 
+.features__number {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.features__description {
+  margin: 0;
+}
+
+.features__image {
+  display: block;
+}
+
+.arguments__description {
+  margin: 0;
+}
+
 .search-hotel {
+  padding: 92px 304px;
   text-align: center;
 }
 
@@ -165,11 +255,13 @@
 }
 
 .search-hotel__link {
+  min-width: 574px;
   font-size: 20px;
   line-height: 36px;
 }
 
 .subscribe {
+  padding: 94px 200px;
   text-align: center;
 }
 
@@ -203,8 +295,15 @@
   line-height: 36px;
 }
 
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
 .social {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .page-footer__phone {
@@ -214,6 +313,7 @@
   text-decoration: none;
 }
 
+/* Каталог */
 .filters-container {
   color: #ffffff;
   background-color: #82b3d3;
@@ -222,7 +322,6 @@
   background-size: cover;
 }
 
-
 .inner-header__title {
   font-size: 60px;
   line-height: 78px;
@@ -230,10 +329,42 @@
 
 .breadcrumbs {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
 }
 
 .breadcrumbs__link {
   text-decoration: none;
+}
+
+
+.filters__form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form__fieldset--infrastructure {
+  margin-right: 70px;
+}
+
+.form__fieldset--housing {
+  margin-right: 167px;
+}
+
+.form__fieldset--price {
+  margin-right: 70px;
+}
+
+.form__buttons {
+  display: flex;
+  flex-direction: column;
 }
 
 .form__title {
@@ -244,9 +375,17 @@
 
 .form__list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sorting__filters-container {
+  display: flex;
 }
 
 .sorting__title {
+  margin: 0;
+  margin-right: 191px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -254,8 +393,18 @@
   color: #000000;
 }
 
-.sorting__list {
+.sorting__buttons-list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sorting__list {
+  /* display: grid;
+  grid-template-columns: repeat(3, 340px); */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .card__link-title {
@@ -275,6 +424,23 @@
   background-color: #f2f2f2;
 }
 
+.sorting__pagination-container {
+  display: flex;
+}
+
+.pagination {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination__item:not(:last-child) {
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
 .pagination__link {
   font-size: 20px;
   line-height: 36px;
@@ -287,5 +453,10 @@
 .pagination__link--current {
   color: #000000;
   background-color: #f2f2f2;
+}
+
+.sorting__select-text {
+  margin-left: auto;
+  margin-right: 51px;
 }
 
