@@ -487,7 +487,7 @@ img {
 
 .sorting__buttons-item:not(:last-child) {
   margin-right: 8px;
-  /* margin-bottom: 8px; */
+  margin-bottom: 8px;
 }
 
 .sorting__button {
@@ -497,9 +497,9 @@ img {
 }
 
 .sorting__list {
-  /* display: grid;
+  display: grid;
   grid-template-columns: repeat(3, 340px);
-  column-gap: 18px; */
+  column-gap: 18px;
   list-style-type: none;
   margin: 0;
   margin-bottom: 66px;
@@ -507,16 +507,16 @@ img {
 }
 
 .card {
-  /* display: grid;
+  display: grid;
   grid-template-columns: 140px 140px;
   column-gap: 20px;
-  row-gap: 16px; */
+  row-gap: 16px;
   padding: 20px;
 }
 
 .card__link-image {
   display: block;
-  /* grid-column: 1 / -1; */
+  grid-column: 1 / -1;
 }
 
 .card__image {
@@ -524,7 +524,7 @@ img {
 }
 
 .card__link-title {
-  /* grid-column: 1 / -1; */
+  grid-column: 1 / -1;
   text-decoration: none;
 }
 
@@ -541,7 +541,7 @@ img {
 }
 
 .card__raiting {
-  /* display: block; */
+  display: block;
   padding: 8.5px;
   font-size: 16px;
   line-height: 20px;
