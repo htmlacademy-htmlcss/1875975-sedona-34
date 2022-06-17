@@ -77,6 +77,11 @@ img {
   background-color: #7db54f;
 }
 
+.button--submit {
+  /* min-width: 160px; */
+  padding: 14px 15px;
+}
+
 .button--reset {
   align-self: center;
   /* min-width: 100px;
@@ -277,6 +282,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 75px 72px;
+  /* или background-size: cover? */
 }
 
 .arguments__item--food::before {
@@ -514,18 +520,50 @@ img {
 }
 
 .breadcrumbs {
+  position: relative;
+  top: 8px;
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   list-style-type: none;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   padding: 0;
   font-size: 16px;
 }
 
 .breadcrumbs__link {
+  display: block;
   text-decoration: none;
   margin-right: 25px;
+}
+
+.breadcrumbs__item {
+  position: relative;
+}
+
+.breadcrumbs__item + .breadcrumbs__item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -12.5px;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 8px;
+  background-image: url("../images/icons/breadcrumbs-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 5px 8px;
+
+}
+
+.breadcrumbs__link--home {
+  min-width: 12px;
+  min-height: 12px;
+  background-image: url("../images/icons/breadcrumbs-home.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px 12px;
 }
 
 .filters__form {
@@ -580,12 +618,13 @@ img {
 }
 
 .sorting {
-  padding: 55px 0 25px;
+  padding: 55px 1px 25px 3px;
 }
 
 .sorting__filters-container {
   display: flex;
-  margin-bottom: 56px;
+  margin-bottom: 57px;
+  align-items: center;
 }
 
 .sorting__title {
@@ -609,13 +648,36 @@ img {
 
 .sorting__buttons-item:not(:last-child) {
   margin-right: 8px;
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
 }
 
 .sorting__button {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 48px;
   height: 48px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 14px;
+}
+
+.sorting__button--current {
+  border-color: #000000;
+}
+
+.sorting__button--table {
+  background-image: url("../images/icons/mode-title.svg");
+}
+
+.sorting__button--slideshow {
+  background-image: url("../images/icons/mode-slideshow.svg");
+}
+
+.sorting__button--list {
+  background-image: url("../images/icons/mode-list.svg");
 }
 
 .sorting__list {
@@ -653,13 +715,38 @@ img {
 .card__title {
   margin: 0;
   font-size: 24px;
-  line-height: 31px;
+  line-height: 28px;
   color: #000000;
 }
 
 .card__type,
 .card__price {
   margin: 0;
+  align-self: center;
+  /* position: relative;
+  bottom: 5px; */
+}
+
+.card__stars-raiting {
+  display: block;
+  height: 17px;
+  margin: 0;
+  padding: 0;
+  align-self: center;
+  background-image: url("../images/icons/star.svg");
+  background-repeat: space;
+}
+
+.card__stars-raiting--two {
+  width: 42px;
+}
+
+.card__stars-raiting--three {
+  width: 66px;
+}
+
+.card__stars-raiting--four {
+  width: 89px;
 }
 
 .card__raiting {
