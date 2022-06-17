@@ -135,13 +135,27 @@ img {
 }
 
 .site-list__link {
+  position: relative;
   display: block;
   padding: 20px 17px;
+  padding-bottom: 19px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
   text-decoration: none;
+}
+
+.site-list__link--current::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 65px;
+  left: 17px;
+  right: 17px;
+  height: 2px;
+  transform: translateY(-50%);
+  background-color: #756257;
 }
 
 .user-list {
@@ -152,6 +166,7 @@ img {
 }
 
 .user-list__link {
+  position: relative;
   display: block;
   min-width: 42px;
   min-height: 37px;
@@ -159,15 +174,46 @@ img {
 
 .user-list__link--button {
   min-width: 160px;
+  margin-left: 20px;
+}
+
+.user-list__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
 }
 
 .intro {
+  position: relative;
   padding: 51px 0 82px;
   background-color: #d9e7f0;
   background-image: url("../images/index-background.jpeg");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   text-align: center;
+}
+
+.intro::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 1200px;
+  height: 57px;
+  background-image: url("../images/divider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1200px 57px;
+}
+
+.intro__logo {
+  display: block;
+  margin: 0 auto;
 }
 
 .features {
@@ -204,7 +250,7 @@ img {
 .features__item {
   width: 400px;
   min-height: 384px;
-  padding: 103px 85px;
+  padding: 102px 85px;
 }
 
 .features__item--with-photo {
@@ -213,9 +259,52 @@ img {
 }
 
 .arguments__item {
+  position: relative;
   width: 400px;
   min-height: 384px;
-  padding: 183px 85px 80px;
+  padding: 182px 85px 80px;
+}
+
+.arguments__item--house::before {
+  content: "";
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75px;
+  height: 72px;
+  background-image: url("../images/icons/icon-house.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75px 72px;
+}
+
+.arguments__item--food::before {
+  content: "";
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 74px;
+  height: 70px;
+  background-image: url("../images/icons/icon-food.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 74px 70px;
+}
+
+.arguments__item--gift::before {
+  content: "";
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 76px;
+  background-image: url("../images/icons/icon-gift.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 64px 76px;
 }
 
 .features__item:nth-of-type(3),
@@ -239,7 +328,7 @@ img {
 }
 
 .features__text {
-  padding: 92px 85px;
+  padding: 90px 85px;
 }
 
 .features__title,
@@ -268,6 +357,7 @@ img {
 
 .features__image {
   display: block;
+  height: 384px;
 }
 
 .arguments__description {
@@ -275,7 +365,7 @@ img {
 }
 
 .search-hotel {
-  padding: 92px 304px;
+  padding: 91px 304px 93px;
   text-align: center;
 }
 
@@ -298,6 +388,7 @@ img {
 
 .search-hotel__link {
   min-width: 574px;
+  padding: 12px 15px;
   font-size: 20px;
   line-height: 36px;
 }
@@ -312,11 +403,12 @@ img {
   background-color: #d9e7f0;
   background-image: url("../images/subscribe-background.jpeg");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 
 .subscribe__title {
-  margin: 40px;
+  margin: 0;
   margin-bottom: 29px;
   font-size: 30px;
   line-height: 36px;
@@ -341,6 +433,7 @@ img {
 }
 
 .subscribe__button {
+  padding: 12px 15px;
   font-size: 20px;
   line-height: 36px;
 }
@@ -349,7 +442,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 0 30px;
+  padding: 45px 0 30px;
 }
 
 .social {
@@ -361,12 +454,24 @@ img {
 }
 
 .social__link {
+  position: relative;
   display: block;
   min-width: 47px;
   min-height: 40px;
 }
 
+.social__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #83b3d3;
+}
+
 .page-footer__phone {
+  display: block;
   font-size: 40px;
   line-height: 40px;
   color: #000000;
@@ -374,9 +479,20 @@ img {
 }
 
 .page-footer__copyright {
+  position: relative;
   display: block;
   width: 115px;
   height: 34px;
+}
+
+.page-footer__logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
 }
 
 /* Каталог */
@@ -386,6 +502,7 @@ img {
   background-color: #82b3d3;
   background-image: url("../images/catalog-background.jpeg");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 
