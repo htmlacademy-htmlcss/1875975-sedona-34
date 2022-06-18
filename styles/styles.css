@@ -69,11 +69,58 @@ img {
   vertical-align: middle;
 }
 
+.button:hover {
+  background-color: #615048;
+}
+
+.button:focus {
+  background-color: #615048;
+  outline: none;
+}
+
+/* .button:focus:not(:focus-visible) {
+  background-color: #756157;
+}
+
+.button:focus-visible {
+  background-color: #615048;
+  outline: none;
+} */
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #756157;
+}
+
 .button--second {
   background-color: #82b3d3;
 }
 
+.button--second:hover {
+  background-color: #68a2cA;
+}
+
+.button--second:focus {
+  background-color: #68a2cA;
+}
+
+.button--second:active {
+  background-color: #82b3d3;
+}
+
 .button--selected {
+  background-color: #7db54f;
+}
+
+.button--selected:hover {
+  background-color: #6c9e42;
+}
+
+.button--selected:focus {
+  background-color: #6c9e42;
+}
+
+.button--selected:active {
   background-color: #7db54f;
 }
 
@@ -90,6 +137,36 @@ img {
   font-weight: 400;
   text-transform: none;
   background-color: transparent;
+}
+
+.button--reset:hover {
+  opacity: 0.6;
+  background-color: transparent;
+}
+
+.button--reset:focus {
+  background-color: transparent;
+  box-shadow: 0 0 0 3px #83b3d3 inset;
+  outline: none;
+}
+
+.button--reset:focus:not(:focus-visible) {
+  box-shadow: none;
+}
+
+.button--reset:focus-visible {
+  box-shadow: 0 0 0 3px #83b3d3 inset;
+  outline: none;
+}
+
+.button--reset:active {
+  opacity: 0.3;
+  background-color: transparent;
+}
+
+
+.button:disabled {
+  background-color: #e5e5e5;
 }
 
 .page-container {
@@ -121,6 +198,20 @@ img {
   margin-right: 30px;
   margin-bottom: -5px;
   z-index: 1;
+  cursor: pointer;
+}
+
+.main-nav__logo:hover {
+  opacity: 0.6;
+}
+
+.main-nav__logo:focus {
+  opacity: 0.6;
+  outline: none;
+}
+
+.main-nav__logo:active {
+  opacity: 0.3;
 }
 
 .main-nav__logo-image {
