@@ -70,23 +70,10 @@ img {
   vertical-align: middle;
 }
 
-.button:hover {
-  background-color: #615048;
-}
-
+.button:hover,
 .button:focus {
   background-color: #615048;
-  outline: none;
 }
-
-/* .button:focus:not(:focus-visible) {
-  background-color: #756157;
-}
-
-.button:focus-visible {
-  background-color: #615048;
-  outline: none;
-} */
 
 .button:active {
   color: rgba(255, 255, 255, 0.3);
@@ -161,7 +148,6 @@ img {
   background-color: transparent;
 }
 
-
 .button:disabled {
   background-color: #e5e5e5;
 }
@@ -198,13 +184,9 @@ img {
   cursor: pointer;
 }
 
-.main-nav__logo:hover {
-  opacity: 0.6;
-}
-
+.main-nav__logo:hover,
 .main-nav__logo:focus {
   opacity: 0.6;
-  outline: none;
 }
 
 .main-nav__logo:active {
@@ -239,13 +221,9 @@ img {
   text-decoration: none;
 }
 
-.site-list__link:hover {
-  color: #756157;
-}
-
+.site-list__link:hover,
 .site-list__link:focus {
   color: #756157;
-  outline: none;
 }
 
 .site-list__link:active {
@@ -278,15 +256,8 @@ img {
   min-height: 37px;
 }
 
-.user-list__link:hover .user-list__icon {
-  fill: #756257;
-}
-
-.user-list__link:focus {
-  outline: none;
-}
-
-.user-list__link:focus .user-list__icon {
+.user-list__link:hover .user-list__icon,
+.user-list__link:focus .user-list__icon  {
   fill: #756257;
 }
 
@@ -636,14 +607,7 @@ img {
   min-height: 40px;
 }
 
-.social__link:hover .social__icon {
-  fill: #68a2ca;
-}
-
-.social__link:focus {
-  outline: none;
-}
-
+.social__link:hover .social__icon,
 .social__link:focus .social__icon {
   fill: #68a2ca;
 }
@@ -670,19 +634,14 @@ img {
   text-decoration: none;
 }
 
-.page-footer__phone:hover {
+.page-footer__phone:hover,
+.page-footer__phone:focus  {
   color: #756157;
-}
-
-.page-footer__phone:focus {
-  color: #756157;
-  outline: none;
 }
 
 .page-footer__phone:active {
   color: rgba(117, 97, 87, 0.3);
 }
-
 
 .page-footer__copyright {
   position: relative;
@@ -691,14 +650,7 @@ img {
   height: 34px;
 }
 
-.page-footer__copyright:hover .page-footer__logo {
-  fill: #756257;
-}
-
-.page-footer__copyright:focus {
-  outline: none;
-}
-
+.page-footer__copyright:hover .page-footer__logo,
 .page-footer__copyright:focus .page-footer__logo {
   fill: #756257;
 }
@@ -774,10 +726,6 @@ img {
 
 .breadcrumbs__link:hover {
   opacity: 0.6;
-}
-
-.breadcrumbs__link:focus {
-  outline: none;
 }
 
 .breadcrumbs__link:active {
@@ -904,6 +852,7 @@ img {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
+  text-transform: capitalize;
 }
 
 .form__title--price {
@@ -1109,9 +1058,7 @@ img {
 }
 
 .sorting__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   width: 48px;
   height: 48px;
   border: 2px solid #e5e5e5;
@@ -1121,20 +1068,11 @@ img {
   background-size: 16px 14px;
 }
 
-.sorting__button:hover {
+.sorting__button:hover, {
   border-color: #000000;
 }
 
 .sorting__button:focus {
-  border-color: #68a2ca;
-  outline: none;
-}
-
-.sorting__button:focus:not(:focus-visible) {
-  border-color: #e5e5e5;
-}
-
-.sorting__button:focus-visible {
   border-color: #68a2ca;
   outline: none;
 }
@@ -1182,13 +1120,9 @@ img {
   grid-column: 1 / -1;
 }
 
-.card__link-image:hover {
-  opacity: 0.6;
-}
-
+.card__link-image:hover,
 .card__link-image:focus {
   opacity: 0.6;
-  outline: none;
 }
 
 .card__link-image:active {
@@ -1201,17 +1135,11 @@ img {
 
 .card__link-title {
   grid-column: 1 / -1;
+  width: fit-content;
   text-decoration: none;
 }
 
-.card__link-title:hover .card__title {
-  color: #756157;
-}
-
-.card__link-title:focus {
-  outline: none;
-}
-
+.card__link-title:hover .card__title,
 .card__link-title:focus .card__title {
   color: #756157;
 }
@@ -1301,13 +1229,9 @@ img {
   border-radius: 4px;
 }
 
-.pagination__link:hover:not(.pagination__link--current) {
+.pagination__link:hover:not(.pagination__link--current),
+.pagination__link:focus {
   background-color: #68a2ca;
-}
-
-.pagination__link:focus:not(.pagination__link--current) {
-  background-color: #68a2ca;
-  outline: none;
 }
 
 .pagination__link:active:not(.pagination__link--current) {
@@ -1323,4 +1247,23 @@ img {
 .sorting__select-text {
   margin-left: auto;
   margin-right: 51px;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 62px 70px 70px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
 }

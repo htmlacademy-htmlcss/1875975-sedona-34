@@ -173,5 +173,56 @@
       </footer>
 
     </div>
+
+    <div class="modal-container">
+      <div class="modal">
+        <button class="modal-button-close" type="button">
+          <span class="visually-hidden">Закрыть.</span>
+        </button>
+        <section class="modal__content">
+          <h2 class="modal__title">Поиск гостиницы в Седоне</h2>
+          <form class="modal__form form-modal" action="https://echo.htmlacademy.ru/" method="get">
+            <label class="form-modal__label" for="check-in">Дата заезда:</label>
+            <input class="form-modal__input" type="text" id="check-in" name="check-in" placeholder="27 апреля 2020" required>
+            <button class="form-modal__calendar-button" type="button">
+              <span class="visually-hidden">Выбор даты заезда.</span>
+            </button>
+            <p class="form-modal__message form-modal__message--error">Мы не можем отправить вас в прошлое.</p>
+            <label class="form-modal__label" for="check-out">Дата выезда:</label>
+            <input class="form-modal__input" type="text" id="check-out" name="check-out" placeholder="1 сентября 2021" required>
+            <button class="form-modal__calendar-button" type="button">
+              <span class="visually-hidden">Выбор даты выезда.</span>
+            </button>
+            <p class="form-modal__message form-modal__message--success">На эти даты есть свободные номера. Пока есть.</p>
+            <label class="form-modal__label" for="adults">Взрослые:</label>
+            <div class="number-container">
+              <button class="form-modal__quantity form-modal__quantity--minus" type="button">
+                <span class="visually-hidden">Уменьшить.</span>
+              </button>
+              <input class="form-modal__input" type="number" id="adults" name="adults" placeholder="2" min="0" required>
+              <button class="form-modal__quantity form-modal__quantity--plus" type="button">
+                <span class="visually-hidden">Увеличить.</span>
+              </button>
+            </div>
+            <label class="form-modal__label" for="children">Дети:</label>
+            <span class="form-modal__tooltip">
+              <button class="form-modal__tooltip-button" type="button" aria-labelledby="tooltip-label">
+                <span class="visually-hidden">Посмотреть дополнительную информацию.</span>
+              </button>
+              <span class="form-modal__tooltip-content" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+            </span>
+            <div class="number-container">
+              <button class="form-modal__quantity form-modal__quantity--minus" type="button">
+                <span class="visually-hidden">Уменьшить.</span>
+              </button>
+              <input class="form-modal__input" type="number" id="children" name="children" placeholder="1" min="0" required>
+              <button class="form-modal__quantity form-modal__quantity--plus" type="button">
+                <span class="visually-hidden">Увеличить.</span>
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 </html>
