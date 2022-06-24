@@ -753,14 +753,6 @@ img {
   margin-right: 70px;
 }
 
-/* .form__fieldset--infrastructure {
-  margin-right: 70px;
-}
-
-.form__fieldset--housing {
-  margin-right: 175px;
-} */
-
 .form__fieldset--price {
   margin-left: auto;
 }
@@ -909,6 +901,12 @@ img {
   outline: none;
   box-shadow: none;
 }
+
+/* .range__input:active {
+  background-color: #756257;
+  outline: none;
+  box-shadow: none;
+} */
 
 .range__input::-webkit-outer-spin-button,
 .range__input::-webkit-inner-spin-button {
@@ -1068,7 +1066,7 @@ img {
   background-size: 16px 14px;
 }
 
-.sorting__button:hover, {
+.sorting__button:hover {
   border-color: #000000;
 }
 
@@ -1253,6 +1251,7 @@ img {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 2;
   width: 100%;
   height: 100%;
   display: flex;
@@ -1262,8 +1261,280 @@ img {
 .modal {
   position: relative;
   margin: auto;
-  padding: 62px 70px 70px;
+  padding: 62px 70px 70px 68px;
   background-color: #ffffff;
   border-radius: 30px;
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+}
+
+.modal--search {
+  width: 715px;
+}
+
+.modal__button-close {
+  position: absolute;
+  top: 54px;
+  right: 70px;
+  width: 53px;
+  height: 53px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modal__button-close::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 13px;
+  height: 13px;
+  background-image: url("../images/icons/icon-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.modal__button-close:hover {
+  background-color: #e6e6e6;
+}
+
+.modal__button-close:focus {
+  background-color: #e6e6e6;
+  box-shadow: 0 0 0 3px #83b3d3;
+  outline: none;
+}
+
+.modal__button-close:active {
+  background-color: #e6e6e6;
+  box-shadow: none;
+}
+
+.modal__button-close:active::before {
+  opacity: 0.3;
+}
+
+.modal__title {
+  margin: 0;
+  margin-bottom: 63px;
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.modal__form {
+  display: grid;
+  grid-template-columns: 288px 230px;
+  column-gap: 56px;
+  row-gap: 40px;
+  width: 575px;
+  margin: 0 auto;
+}
+
+.modal-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  /* margin-bottom: 40px; */
+}
+
+.modal-wrapper--checkin {
+  grid-column: 1 / -1;
+}
+
+.modal-wrapper--checkout {
+  grid-column: 1 / -1;
+}
+
+.form-modal__label {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.form-modal__input {
+  position: relative;
+  padding: 12px 19px 13px;
+  min-height: 50px;
+  font: inherit;
+  color: #000000;
+  background-color: #f2f2f2;
+  border: 2px solid transparent;
+  border-radius: 4px;
+}
+
+.form-modal__input:hover {
+  background-color: #e6e6e6;
+}
+
+.form-modal__input:focus {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.form-modal__input:active,
+.form-modal__input:not(:placeholder-shown) {
+  background-color: #ffffff;
+  border-color: #000000;
+  outline: none;
+}
+
+.form-modal__input--date {
+  min-width: 420px;
+}
+
+.form-modal__input--number {
+  width: 100%;
+  text-align: center;
+}
+
+.form-modal__input::placeholder {
+  color: #000000;
+}
+
+.form-modal__calendar-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  background-image: url("../images/icons/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15px 15px;
+  border: none;
+}
+
+.form-modal__message {
+  position: absolute;
+  top: 100%;
+  left: 155px;
+  margin: 0;
+  transform: translateY(50%);
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.form-modal__message--error {
+  color: #ff5757;
+}
+
+.number-container {
+  position: relative;
+  width: 133px;
+}
+
+.form-modal__quantity {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: 3px solid transparent;
+  border-radius: 4px;
+}
+
+.form-modal__quantity--minus {
+  top: 50%;
+  left: 13px;
+  transform: translateY(-50%);
+}
+
+.form-modal__quantity--minus::before {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.form-modal__quantity--plus {
+  top: 50%;
+  right: 13px;
+  transform: translateY(-50%);
+}
+
+.form-modal__quantity--plus::before,
+.form-modal__quantity--plus::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.form-modal__quantity--plus::after {
+  transform: rotate(90deg);
+}
+
+.form-modal__input--number::-webkit-outer-spin-button,
+.form-modal__input--number::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.form-modal__tooltip-button {
+  position: relative;
+  right: 6px;
+  width: 25px;
+  height: 25px;
+  background-color: #83b3d3;
+  background-image: url("../images/icons/icon-info.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1px 9px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.form-modal__tooltip-content {
+  position: absolute;
+  top: 54px;
+  right: 35px;
+  width: 256px;
+  padding: 15px 18px 23px 22px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #333333;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.form-modal__tooltip-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 19px;
+  height: 9px;
+  background-image: url("../images/tooltip-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.form-modal__button {
+  grid-column: 1 / -1;
+  padding: 12px 26px;
+  font-size: 20px;
+  line-height: 36px;
+  border-radius: 10px;
+}
+
+.form-modal__button:focus {
+  outline: 3px solid #756257;
 }
