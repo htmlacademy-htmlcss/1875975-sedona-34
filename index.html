@@ -174,7 +174,7 @@
 
     </div>
 
-    <div class="modal-container">
+    <div class="modal-container modal-container--close">
       <div class="modal modal--search">
         <button class="modal__button-close" type="button">
           <span class="visually-hidden">Закрыть.</span>
@@ -184,7 +184,7 @@
           <form class="modal__form form-modal" action="https://echo.htmlacademy.ru/" method="get">
             <div class="modal-wrapper modal-wrapper--checkin">
               <label class="form-modal__label" for="check-in">Дата заезда:</label>
-              <input class="form-modal__input form-modal__input--date" type="text" id="check-in" name="check-in" placeholder="27 апреля 2020" required>
+              <input class="form-modal__input form-modal__input--date" type="text" id="check-in" name="check-in" placeholder="Укажите дату" value="27 апреля 2020" required>
               <button class="form-modal__calendar-button" type="button">
                 <span class="visually-hidden">Выбор даты заезда.</span>
               </button>
@@ -192,7 +192,7 @@
             </div>
             <div class="modal-wrapper modal-wrapper--checkout">
               <label class="form-modal__label" for="check-out">Дата выезда:</label>
-              <input class="form-modal__input form-modal__input--date" type="text" id="check-out" name="check-out" placeholder="1 сентября 2021" required>
+              <input class="form-modal__input form-modal__input--date" type="text" id="check-out" name="check-out" placeholder="Укажите дату" value="1 сентября 2021" required>
               <button class="form-modal__calendar-button" type="button">
                 <span class="visually-hidden">Выбор даты выезда.</span>
               </button>
@@ -204,7 +204,7 @@
                 <button class="form-modal__quantity form-modal__quantity--minus" type="button">
                   <span class="visually-hidden">Уменьшить.</span>
                 </button>
-                <input class="form-modal__input form-modal__input--number" type="number" id="adults" name="adults" placeholder="2" min="0" required>
+                <input class="form-modal__input form-modal__input--number" type="number" id="adults" name="adults" value="2" min="0" required>
                 <button class="form-modal__quantity form-modal__quantity--plus" type="button">
                   <span class="visually-hidden">Увеличить.</span>
                 </button>
@@ -222,7 +222,7 @@
                 <button class="form-modal__quantity form-modal__quantity--minus" type="button">
                   <span class="visually-hidden">Уменьшить.</span>
                 </button>
-                <input class="form-modal__input form-modal__input--number" type="number" id="children" name="children" placeholder="1" min="0" required>
+                <input class="form-modal__input form-modal__input--number" type="number" id="children" name="children" value="1" min="0" required>
                 <button class="form-modal__quantity form-modal__quantity--plus" type="button">
                   <span class="visually-hidden">Увеличить.</span>
                 </button>
