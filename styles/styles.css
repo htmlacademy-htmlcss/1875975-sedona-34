@@ -1398,6 +1398,7 @@ img {
   background-color: #f2f2f2;
   border: 2px solid transparent;
   border-radius: 4px;
+  appearance: textfield;
 }
 
 .form-modal__input:hover {
@@ -1481,15 +1482,12 @@ img {
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 25px;
   height: 25px;
   background-color: transparent;
   border: 3px solid transparent;
   border-radius: 4px;
-  opacity: 0.6;
+  opacity: 0.3;
   cursor: pointer;
 }
 
@@ -1553,6 +1551,7 @@ img {
 }
 
 .form-modal__tooltip-content {
+  display: none;
   position: absolute;
   top: 54px;
   right: 35px;
