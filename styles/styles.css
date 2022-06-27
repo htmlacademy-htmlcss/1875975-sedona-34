@@ -587,9 +587,9 @@ img {
   outline: none;
 }
 
-.subscribe__form-input:active {
+.subscribe__form-input:not(:placeholder-shown) {
   background-color: #ffffff;
-  box-shadow: 0 0 0 3px #e5e5e5 inset;
+  box-shadow: 0 0 0 3px #333333 inset;
 }
 
 .subscribe__button {
@@ -604,7 +604,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 45px 0 35px;
+  padding: 46px 0 35px;
 }
 
 .social {
@@ -923,7 +923,7 @@ img {
   outline: 3px solid #81b3d2;
 }
 
-.range__input:active {
+.range__input:not(:placeholder-shown) {
   background-color: #756257;
   outline: none;
   box-shadow: none;
