@@ -589,7 +589,18 @@ img {
 
 .subscribe__form-input:not(:placeholder-shown) {
   background-color: #ffffff;
-  box-shadow: 0 0 0 3px #333333 inset;
+  box-shadow: 0 0 0 2px #333333 inset;
+}
+
+
+/* Класс на случай ошибки в заполнении формы подписки*/
+.subscribe__form-input--error,
+.subscribe__form-input--error:hover,
+.subscribe__form-input--error:focus {
+  background-color: #ffffff;
+  border: 2px solid #ff5757;
+  box-shadow: none;
+  outline: none;
 }
 
 .subscribe__button {
@@ -1410,7 +1421,13 @@ img {
   outline: 3px solid #83b3d3;
 }
 
-.form-modal__input:active {
+.form-modal__input:not(:placeholder-shown) {
+  color: #000000;
+  background-color: #f2f2f2;
+  border: 2px solid transparent;
+}
+
+.form-modal__input:focus:not(:placeholder-shown) {
   background-color: #ffffff;
   border-color: #000000;
   outline: none;
