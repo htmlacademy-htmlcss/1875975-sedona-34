@@ -214,6 +214,7 @@ img {
 }
 
 .site-list {
+  max-width: 500px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -380,7 +381,7 @@ img {
 .features__item {
   width: 400px;
   min-height: 384px;
-  padding: 102px 85px;
+  padding: 102px 80px;
 }
 
 .features__item--with-photo {
@@ -458,7 +459,7 @@ img {
 }
 
 .features__text {
-  padding: 90px 85px;
+  padding: 92px 85px;
 }
 
 .features__title,
@@ -529,6 +530,7 @@ img {
 }
 
 .subscribe--index {
+  padding-top: 92px;
   color: #ffffff;
   background-color: #d9e7f0;
   background-image: url("../images/subscribe-background.jpeg");
@@ -585,9 +587,20 @@ img {
   outline: none;
 }
 
-.subscribe__form-input:active {
+.subscribe__form-input:not(:placeholder-shown) {
   background-color: #ffffff;
-  box-shadow: 0 0 0 3px #e5e5e5 inset;
+  box-shadow: 0 0 0 2px #333333 inset;
+}
+
+
+/* Класс на случай ошибки в заполнении формы подписки*/
+.subscribe__form-input--error,
+.subscribe__form-input--error:hover,
+.subscribe__form-input--error:focus {
+  background-color: #ffffff;
+  border: 2px solid #ff5757;
+  box-shadow: none;
+  outline: none;
 }
 
 .subscribe__button {
@@ -602,13 +615,14 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 45px 0 30px;
+  padding: 46px 0 35px;
 }
 
 .social {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  max-width: 200px;
   margin: 0;
   padding: 0;
 }
@@ -754,12 +768,17 @@ img {
   background-size: 12px 12px;
 }
 
+.breadcrumbs__link--current:hover {
+  opacity: 1;
+}
+
 .filters__form {
   display: flex;
   flex-wrap: wrap;
 }
 
 .form__fieldset {
+  max-width: 200px;
   margin: 0;
   padding: 0;
   border: none;
@@ -915,7 +934,7 @@ img {
   outline: 3px solid #81b3d2;
 }
 
-.range__input:active {
+.range__input:not(:placeholder-shown) {
   background-color: #756257;
   outline: none;
   box-shadow: none;
@@ -995,21 +1014,21 @@ img {
   flex-direction: column;
   justify-content: flex-end;
   align-self: flex-end;
+  margin-top: 10px;
 }
 
 .sorting {
-  padding: 55px 1px 25px 3px;
+  padding: 55px 1px 17px 3px;
 }
 
 .sorting__filters-container {
   display: flex;
-  margin-bottom: 57px;
+  margin-bottom: 49px;
   align-items: center;
 }
 
 .sorting__title {
-  margin: 0;
-  margin-right: 191px;
+  margin: 0 191px 4px 0;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -1048,24 +1067,34 @@ img {
 
 .sorting__select--price {
   min-width: 290px;
+  margin-bottom: 8px;
 }
 
 .sorting__select--number {
   min-width: 160px;
+  margin-bottom: 8px;
+}
+
+.sorting__select-text {
+  margin-left: auto;
+  margin-right: 51px;
+  padding-bottom: 8px;
 }
 
 .sorting__buttons-list {
+  max-width: 200px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   list-style-type: none;
   margin: 0;
   margin-left: auto;
   padding: 0;
 }
 
-.sorting__buttons-item:not(:last-child) {
-  margin-right: 8px;
-  /* margin-bottom: 8px; */
+.sorting__buttons-item {
+  margin-left: 8px;
+  margin-bottom: 8px;
 }
 
 .sorting__button {
@@ -1220,9 +1249,9 @@ img {
   padding: 0;
 }
 
-.pagination__item:not(:last-child) {
+.pagination__item {
   margin-right: 8px;
-  /* margin-bottom: 8px; */
+  margin-bottom: 8px;
 }
 
 .pagination__link {
@@ -1253,11 +1282,6 @@ img {
 .pagination__link--current {
   color: #000000;
   background-color: #f2f2f2;
-}
-
-.sorting__select-text {
-  margin-left: auto;
-  margin-right: 51px;
 }
 
 .modal-container {
@@ -1385,6 +1409,7 @@ img {
   background-color: #f2f2f2;
   border: 2px solid transparent;
   border-radius: 4px;
+  appearance: textfield;
 }
 
 .form-modal__input:hover {
@@ -1396,7 +1421,13 @@ img {
   outline: 3px solid #83b3d3;
 }
 
-.form-modal__input:active {
+.form-modal__input:not(:placeholder-shown) {
+  color: #000000;
+  background-color: #f2f2f2;
+  border: 2px solid transparent;
+}
+
+.form-modal__input:focus:not(:placeholder-shown) {
   background-color: #ffffff;
   border-color: #000000;
   outline: none;
@@ -1468,15 +1499,12 @@ img {
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 25px;
   height: 25px;
   background-color: transparent;
   border: 3px solid transparent;
   border-radius: 4px;
-  opacity: 0.6;
+  opacity: 0.3;
   cursor: pointer;
 }
 
@@ -1540,6 +1568,7 @@ img {
 }
 
 .form-modal__tooltip-content {
+  display: none;
   position: absolute;
   top: 54px;
   right: 35px;
